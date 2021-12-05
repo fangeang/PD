@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "853719230154",
+    "project_id": "fanguber-8be78",
+    "storage_bucket": "fanguber-8be78.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:853719230154:android:355e99c90bd6720895b633",
+        "android_client_info": {
+          "package_name": "com.flutterthailand.pd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "853719230154-bgg1rs1jed9kc85odmn2ljl1lnhne1p5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCl-Bwj_9QQkzwkAEh2A3CGt6MleAxKs1A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "853719230154-bgg1rs1jed9kc85odmn2ljl1lnhne1p5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
