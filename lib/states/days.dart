@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:pd/utility/my_constant.dart';
 import 'package:pd/widgets/show_text.dart';
 
-class Level extends StatefulWidget {
-  const Level({Key? key}) : super(key: key);
+class Days extends StatefulWidget {
+  const Days({Key? key}) : super(key: key);
 
   @override
-  _LevelState createState() => _LevelState();
+  _DaysState createState() => _DaysState();
 }
 
-class _LevelState extends State<Level> {
-  String? typeLevel;
+class _DaysState extends State<Days> {
+  String? typedays;
 
   @override
   Widget build(BuildContext context) {
@@ -38,27 +38,19 @@ class _LevelState extends State<Level> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Text(
-            'คุณมีอาการหนักเท่าไหร่?',
+            'คุณมีอาการกล้ามเนื้ออ่อนแรงตรงไหน?',
             style: MyConstant().h2Style(),
           ),
-          radioLevel1(),
-          radioLevel2(),
-          radioLevel3(),
-          radioLevel4(),
-          radioLevel5(),
+          radio1Days(),
+          radio2Days(),
+          radio3Days(),
+          radio4Days(),
+          radio5Days(),
+          radioMore5Days(),
           showSubmitButton(),
         ],
       ),
     );
-  }
-
-  Row showSubmitButton() {
-    return Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            submitButton(),
-          ],
-        );
   }
 
   IconButton backButton(BuildContext context) {
@@ -68,6 +60,15 @@ class _LevelState extends State<Level> {
         size: 36.0,
       ),
       onPressed: () => Navigator.pushNamed(context, '/diagnose'),
+    );
+  }
+
+  Row showSubmitButton() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        submitButton(),
+      ],
     );
   }
 
@@ -87,66 +88,79 @@ class _LevelState extends State<Level> {
     );
   }
 
-  RadioListTile<String> radioLevel1() {
+  RadioListTile<String> radio1Days() {
     return RadioListTile(
-      title: const ShowText(data: 'ระดับ1'),
-      value: 'หัวระดับ1',
-      groupValue: typeLevel,
+      title: const ShowText(data: '1  วัน'),
+      value: '1 วัน',
+      groupValue: typedays,
       onChanged: (value) {
         setState(() {
-          typeLevel = value.toString();
+          typedays = value.toString();
         });
       },
     );
   }
 
-  RadioListTile<String> radioLevel2() {
+  RadioListTile<String> radio2Days() {
     return RadioListTile(
-      title: const ShowText(data: 'ระดับ2'),
-      value: 'หัวระดับ2',
-      groupValue: typeLevel,
+      title: const ShowText(data: '2 ครั้ง'),
+      value: '2 ครั้ง',
+      groupValue: typedays,
       onChanged: (value) {
         setState(() {
-          typeLevel = value.toString();
+          typedays = value.toString();
         });
       },
     );
   }
 
-  RadioListTile<String> radioLevel3() {
+  RadioListTile<String> radio3Days() {
     return RadioListTile(
-      title: const ShowText(data: 'ระดับ3'),
-      value: 'หัวระดับ3',
-      groupValue: typeLevel,
+      title: const ShowText(data: '3 ครั้ง'),
+      value: '3 ครั้ง',
+      groupValue: typedays,
       onChanged: (value) {
         setState(() {
-          typeLevel = value.toString();
+          typedays = value.toString();
         });
       },
     );
   }
 
-  RadioListTile<String> radioLevel4() {
+  RadioListTile<String> radio4Days() {
     return RadioListTile(
-      title: const ShowText(data: 'ระดับ4'),
-      value: 'หัวระดับ4',
-      groupValue: typeLevel,
+      title: const ShowText(data: '4 ครั้ง'),
+      value: '4 ครั้ง',
+      groupValue: typedays,
       onChanged: (value) {
         setState(() {
-          typeLevel = value.toString();
+          typedays = value.toString();
         });
       },
     );
   }
 
-  RadioListTile<String> radioLevel5() {
+  RadioListTile<String> radio5Days() {
     return RadioListTile(
-      title: const ShowText(data: 'ระดับ5'),
-      value: 'หัวระดับ5',
-      groupValue: typeLevel,
+      title: const ShowText(data: '5 ครั้ง'),
+      value: '5 ครั้ง',
+      groupValue: typedays,
       onChanged: (value) {
         setState(() {
-          typeLevel = value.toString();
+          typedays = value.toString();
+        });
+      },
+    );
+  }
+
+  RadioListTile<String> radioMore5Days() {
+    return RadioListTile(
+      title: const ShowText(data: 'มากกว่า 5 ครั้ง'),
+      value: 'มากกว่า 5 ครั้ง',
+      groupValue: typedays,
+      onChanged: (value) {
+        setState(() {
+          typedays = value.toString();
         });
       },
     );

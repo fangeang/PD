@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:pd/states/med2.dart';
 import 'package:pd/utility/my_constant.dart';
 
-class Diagnose extends StatefulWidget {
-  const Diagnose({Key? key}) : super(key: key);
+class Diagnose2 extends StatefulWidget {
+  const Diagnose2({Key? key}) : super(key: key);
 
   @override
-  _DiagnoseState createState() => _DiagnoseState();
+  _Diagnose2State createState() => _Diagnose2State();
 }
 
-class _DiagnoseState extends State<Diagnose> {
+class _Diagnose2State extends State<Diagnose2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,23 +37,26 @@ class _DiagnoseState extends State<Diagnose> {
           Text(
             'คุณมีอาการอย่างไร',
             style: MyConstant().h2Style(),
-          ),pageButton(),
-          med1Button(),
-          med2Button(),
-          med5Button(),
-          med6Button(),
-          med7Button(),
-          mednumbButton(),
-          med9Button(),
-          med13Button(),
-          med14Button(),
-          med15Button(),
-          med16Button(),
-          med17Button(),
-          med18Button(),
-          med19Button(),
-          med20Button(),
-          med21Button(),
+          ),
+          Container(
+              margin: const EdgeInsets.symmetric(vertical: 10),
+              child: pageButton()),
+          med22to25Button(),
+          med26Button(),
+          med27Button(),
+          med28Button(),
+          med29Button(),
+          medvomitButton(),
+          med31Button(),
+          med32Button(),
+          med33Button(),
+          med34Button(),
+          med35Button(),
+          med36Button(),
+          med37Button(),
+          med38Button(),
+          med39Button(),
+          med40Button(),
         ],
       ),
     );
@@ -62,6 +64,7 @@ class _DiagnoseState extends State<Diagnose> {
 
   Row pageButton() {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         backpageButton(context),
         page1(),
@@ -77,14 +80,14 @@ class _DiagnoseState extends State<Diagnose> {
   TextButton page1() {
     return TextButton(
       onPressed: () => Navigator.pushNamed(context, '/diagnose'),
-      child:  Text('1',style: MyConstant().h3Style(),),
+      child:  Text('1',style: MyConstant().h4Style(),),
     );
   }
 
   TextButton page2() {
     return TextButton(
       onPressed: () => Navigator.pushNamed(context, '/diagnose2'),
-      child:  Text('2',style: MyConstant().h4Style(),),
+      child:  Text('2',style: MyConstant().h3Style(),),
     );
   }
 
@@ -115,7 +118,7 @@ class _DiagnoseState extends State<Diagnose> {
         Icons.navigate_before,
         size: 16,
       ),
-      onPressed: () => Navigator.pushNamed(context, '/diagnose5'),
+      onPressed: () => Navigator.pushNamed(context, '/diagnose'),
     );
   }
 
@@ -125,7 +128,7 @@ class _DiagnoseState extends State<Diagnose> {
         Icons.navigate_next,
         size: 16,
       ),
-      onPressed: () => Navigator.pushNamed(context, '/diagnose2'),
+      onPressed: () => Navigator.pushNamed(context, '/diagnose3'),
     );
   }
 
@@ -139,8 +142,8 @@ class _DiagnoseState extends State<Diagnose> {
     );
   }
 
-// หน้ามืด
-  Container med1Button() {
+  // อาการร้าว
+  Container med22to25Button() {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 16),
       width: 250,
@@ -149,15 +152,15 @@ class _DiagnoseState extends State<Diagnose> {
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
         onPressed: () => Navigator.pushNamed(context, '/level'),
         child: const Text(
-          'หน้ามืด',
+          'อาการร้าว',
           style: TextStyle(fontSize: 20),
         ),
       ),
     );
   }
 
-// ปวดหัว
-  Container med2Button() {
+  // คัด/แน่นจมูก
+  Container med26Button() {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 16),
       width: 250,
@@ -166,15 +169,15 @@ class _DiagnoseState extends State<Diagnose> {
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
         onPressed: () => Navigator.pushNamed(context, '/level'),
         child: const Text(
-          'ปวดหัว',
+          'คัด/แน่นจมูก',
           style: TextStyle(fontSize: 20),
         ),
       ),
     );
   }
 
-// เจ็บหน้าอก
-  Container med5Button() {
+// ปวดบริเวณกระบอกตา
+  Container med27Button() {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 16),
       width: 250,
@@ -183,151 +186,117 @@ class _DiagnoseState extends State<Diagnose> {
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
         onPressed: () => Navigator.pushNamed(context, '/level'),
         child: const Text(
-          'เจ็บหน้าอก',
+          'ปวดบริเวณกระบอกตา',
           style: TextStyle(fontSize: 20),
         ),
       ),
     );
   }
 
-  // กล้ามเนื้ออ่อนแรง
-  Container med6Button() {
+// หัวใจเต้นเร็ว
+  Container med28Button() {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 16),
       width: 250,
       height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/med6'),
+        onPressed: () => Navigator.pushNamed(context, '/'),
         child: const Text(
-          'กล้ามเนื้ออ่อนแรง',
+          'หัวใจเต้นเร็ว',
           style: TextStyle(fontSize: 20),
         ),
       ),
     );
   }
 
-// ปากเบั้ยว/หน้าเบี้ยว
-  Container med7Button() {
+// คลื่นไส้
+  Container med29Button() {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 16),
       width: 250,
       height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/med7'),
+        onPressed: () => Navigator.pushNamed(context, '/'),
         child: const Text(
-          'ปากเบั้ยว/หน้าเบี้ยว',
+          'คลื่นไส้',
           style: TextStyle(fontSize: 20),
         ),
       ),
     );
   }
 
-// ชา
-  Container mednumbButton() {
+  // อาเจียน
+  Container medvomitButton() {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 16),
       width: 250,
       height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/med8'),
+        onPressed: () => Navigator.pushNamed(context, '/med30'),
         child: const Text(
-          'ชา',
+          'อาเจียน',
           style: TextStyle(fontSize: 20),
         ),
       ),
     );
   }
 
-// ปวดท้อง
-  Container med9Button() {
+// เรอเปรี้ยว
+  Container med31Button() {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 16),
       width: 250,
       height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/stomach'),
+        onPressed: () => Navigator.pushNamed(context, '/'),
         child: const Text(
-          'ปวดท้อง',
+          'หัวใจเต้นเร็ว',
           style: TextStyle(fontSize: 20),
         ),
       ),
     );
   }
 
-// ท้องอืด
-  Container med13Button() {
+// มีไข้
+  Container med32Button() {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 16),
       width: 250,
       height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/level'),
+        onPressed: () => Navigator.pushNamed(context, '/days'),
         child: const Text(
-          'ท้องอืด',
+          'มีไข้',
           style: TextStyle(fontSize: 20),
         ),
       ),
     );
   }
 
-// ท้องผูก
-  Container med14Button() {
+// ไข้หวัด
+  Container med33Button() {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 16),
       width: 250,
       height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/level'),
+        onPressed: () => Navigator.pushNamed(context, '/days'),
         child: const Text(
-          'ท้องผูก',
+          'ไข้หวัด',
           style: TextStyle(fontSize: 20),
         ),
       ),
     );
   }
 
-// จุกเสียด
-  Container med15Button() {
-    return Container(
-      margin: const EdgeInsets.symmetric(vertical: 16),
-      width: 250,
-      height: 50,
-      child: ElevatedButton(
-        style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/level'),
-        child: const Text(
-          'จุกเสียด',
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
-    );
-  }
-
-// ท้องเสีย
-  Container med16Button() {
-    return Container(
-      margin: const EdgeInsets.symmetric(vertical: 16),
-      width: 250,
-      height: 50,
-      child: ElevatedButton(
-        style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/med16'),
-        child: const Text(
-          'ท้องเสีย',
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
-    );
-  }
-
-// แน่นท้อง
-  Container med17Button() {
+// ปวดบริเวณหน้าผาก
+  Container med34Button() {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 16),
       width: 250,
@@ -336,15 +305,15 @@ class _DiagnoseState extends State<Diagnose> {
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
         onPressed: () => Navigator.pushNamed(context, '/level'),
         child: const Text(
-          'แน่นท้อง',
+          'ปวดบริเวณหน้าผาก',
           style: TextStyle(fontSize: 20),
         ),
       ),
     );
   }
 
-// อ่อนเพลีย
-  Container med18Button() {
+// ปวดบริเวณสันจมูก
+  Container med35Button() {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 16),
       width: 250,
@@ -353,15 +322,15 @@ class _DiagnoseState extends State<Diagnose> {
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
         onPressed: () => Navigator.pushNamed(context, '/level'),
         child: const Text(
-          'อ่อนเพลีย',
+          'ปวดบริเวณสันจมูก',
           style: TextStyle(fontSize: 20),
         ),
       ),
     );
   }
 
-// เวียนศรีษะ
-  Container med19Button() {
+// ปวดบริเวณโหนกแก้ม
+  Container med36Button() {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 16),
       width: 250,
@@ -370,15 +339,49 @@ class _DiagnoseState extends State<Diagnose> {
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
         onPressed: () => Navigator.pushNamed(context, '/level'),
         child: const Text(
-          'เวียนศรีษะ',
+          'ปวดบริเวณโหนกแก้ม',
           style: TextStyle(fontSize: 20),
         ),
       ),
     );
   }
 
-// ไอแห้ง
-  Container med20Button() {
+// เหนื่อยง่าย
+  Container med37Button() {
+    return Container(
+      margin: const EdgeInsets.symmetric(vertical: 16),
+      width: 250,
+      height: 50,
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(primary: MyConstant.dark),
+        onPressed: () => Navigator.pushNamed(context, '/'),
+        child: const Text(
+          'เหนื่อง่าย',
+          style: TextStyle(fontSize: 20),
+        ),
+      ),
+    );
+  }
+
+// หายใจหอบ
+  Container med38Button() {
+    return Container(
+      margin: const EdgeInsets.symmetric(vertical: 16),
+      width: 250,
+      height: 50,
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(primary: MyConstant.dark),
+        onPressed: () => Navigator.pushNamed(context, '/'),
+        child: const Text(
+          'หายใจหอบ',
+          style: TextStyle(fontSize: 20),
+        ),
+      ),
+    );
+  }
+
+// แน่นหน้าอก
+  Container med39Button() {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 16),
       width: 250,
@@ -387,24 +390,24 @@ class _DiagnoseState extends State<Diagnose> {
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
         onPressed: () => Navigator.pushNamed(context, '/level'),
         child: const Text(
-          'ไอแห้ง',
+          'แน่นหน้าอก',
           style: TextStyle(fontSize: 20),
         ),
       ),
     );
   }
 
-// ไอมีเสมหะ
-  Container med21Button() {
+// ความดันโลหิตต่ำ
+  Container med40Button() {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 16),
       width: 250,
       height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/level'),
+        onPressed: () => Navigator.pushNamed(context, '/'),
         child: const Text(
-          'ไอมีเสมหะ',
+          'ความดันโลหิตต่ำ',
           style: TextStyle(fontSize: 20),
         ),
       ),

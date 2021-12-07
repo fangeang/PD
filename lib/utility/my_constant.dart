@@ -36,4 +36,10 @@ class MyConstant {
         fontWeight: FontWeight.normal,
         color: dark,
       );
+
+      TextStyle h4Style() => const TextStyle(
+        fontSize: 14,
+        fontWeight: FontWeight.normal,
+        color: Colors.grey,
+      );
 }

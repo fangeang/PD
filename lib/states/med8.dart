@@ -56,7 +56,7 @@ class _Med8State extends State<Med8> {
       height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/level'),
+        onPressed: () => Navigator.pushNamed(context, '/'),
         child: const Text(
           'ชา',
           style: TextStyle(fontSize: 20),
@@ -72,7 +72,7 @@ class _Med8State extends State<Med8> {
       height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/level'),
+        onPressed: () => Navigator.pushNamed(context, '/'),
         child: const Text(
           'ชามือ',
           style: TextStyle(fontSize: 20),
@@ -88,7 +88,7 @@ class _Med8State extends State<Med8> {
       height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/level'),
+        onPressed: () => Navigator.pushNamed(context, '/'),
         child: const Text(
           'ชาเท้า',
           style: TextStyle(fontSize: 20),
@@ -104,7 +104,7 @@ class _Med8State extends State<Med8> {
       height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/level'),
+        onPressed: () => Navigator.pushNamed(context, '/'),
         child: const Text(
           'ชาริมฝีปาก',
           style: TextStyle(fontSize: 20),
@@ -120,7 +120,7 @@ class _Med8State extends State<Med8> {
       height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/level'),
+        onPressed: () => Navigator.pushNamed(context, '/'),
         child: const Text(
           'ชารอบปาก',
           style: TextStyle(fontSize: 20),
@@ -136,7 +136,7 @@ class _Med8State extends State<Med8> {
       height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/level'),
+        onPressed: () => Navigator.pushNamed(context, '/'),
         child: const Text(
           'ชาลิ้น',
           style: TextStyle(fontSize: 20),
@@ -152,7 +152,7 @@ class _Med8State extends State<Med8> {
       height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: MyConstant.dark),
-        onPressed: () => Navigator.pushNamed(context, '/level'),
+        onPressed: () => Navigator.pushNamed(context, '/'),
         child: const Text(
           'ชาคอ',
           style: TextStyle(fontSize: 20),
